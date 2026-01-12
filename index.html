@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAGUAR | Plataforma de Gestión Logística</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                primary: '#0F2F4A',
+                secondary: '#1F5D7A',
+                accent: '#3A7C99',
+                orange: '#F05423',
+                light: '#F8FAFC',
+                border: '#E2E8F0',
+                slate: '#64748B',
+                petroleum: '#0F2F4A',
+                steel: '#3A7C99'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['IBM Plex Mono', 'monospace'],
+              brand: ['Syncopate', 'sans-serif'],
+            },
+            keyframes: {
+              scan: {
+                '0%': { top: '0%' },
+                '100%': { top: '100%' }
+              },
+              'bar-grow': {
+                '0%': { transform: 'scaleY(0)' },
+                '100%': { transform: 'scaleY(1)' }
+              }
+            },
+            animation: {
+              scan: 'scan 8s linear infinite',
+              'bar-grow': 'bar-grow 1s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FFFFFF;
+        color: #0F2F4A;
+        -webkit-font-smoothing: antialiased;
+      }
+      .cargo-grid {
+        background-image: linear-gradient(#E2E8F0 1px, transparent 1px), linear-gradient(90deg, #E2E8F0 1px, transparent 1px);
+        background-size: 50px 50px;
+        opacity: 0.15;
+      }
+      .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+      .reveal.active { opacity: 1; transform: translateY(0); }
+      
+      .btn-primary {
+        background-color: #0F2F4A;
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        transition: all 0.4s ease;
+      }
+      .btn-primary:hover {
+        background-color: #F05423;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(240, 84, 35, 0.2);
+      }
+      .blueprint-border {
+        border: 1px solid #E2E8F0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      }
+      .text-technical {
+        font-family: 'IBM Plex Mono', monospace;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="antialiased overflow-x-hidden">
+    <div class="fixed inset-0 cargo-grid pointer-events-none z-0"></div>
+    <div id="root" class="relative z-10"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
