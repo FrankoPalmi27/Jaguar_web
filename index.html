@@ -39,11 +39,16 @@
               'bar-grow': {
                 '0%': { transform: 'scaleY(0)' },
                 '100%': { transform: 'scaleY(1)' }
+              },
+              'curve-draw': {
+                '0%': { strokeDashoffset: '500' },
+                '100%': { strokeDashoffset: '0' }
               }
             },
             animation: {
               scan: 'scan 8s linear infinite',
-              'bar-grow': 'bar-grow 1s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+              'bar-grow': 'bar-grow 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'curve-draw': 'curve-draw 2s ease-out 0.5s forwards'
             }
           }
         }
@@ -88,6 +93,15 @@
         font-family: 'IBM Plex Mono', monospace;
         letter-spacing: 0.2em;
         text-transform: uppercase;
+      }
+      @keyframes curve-draw {
+        0% { stroke-dashoffset: 500; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .animate-curve-draw {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: curve-draw 2s ease-out 0.5s forwards;
       }
     </style>
 <script type="importmap">

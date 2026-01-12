@@ -5,8 +5,11 @@ import Hero from './components/Hero';
 import Pains from './components/Pains';
 import Solution from './components/Solution';
 import Modules from './components/Modules';
+import WhyJaguar from './components/WhyJaguar';
 import Results from './components/Results';
 import Security from './components/Security';
+import FAQ from './components/FAQ';
+import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
 import { ModalType } from './types';
@@ -35,9 +38,12 @@ const App: React.FC = () => {
         <Hero onOpenModal={setActiveModal} />
         <Pains />
         <Solution />
-        <Modules id="operativa" />
+        <Modules id="modulos" />
+        <WhyJaguar />
         <Results />
         <Security />
+        <FAQ />
+        <FinalCTA onOpenModal={setActiveModal} />
       </main>
 
       <Footer />
