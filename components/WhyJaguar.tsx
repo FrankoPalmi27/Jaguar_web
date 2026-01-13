@@ -45,7 +45,7 @@ const WhyJaguar: React.FC = () => {
             ¿Por qué <span className="text-brand-accent">Jaguar</span>?
           </h2>
           <p className="text-brand-slate text-lg max-w-2xl mx-auto">
-            No es un ERP adaptado. No es un Excel glorificado. Es un sistema pensado desde el día uno para logística.
+            No es un ERP adaptado. Es un sistema pensado desde el día uno para logística.
           </p>
         </div>
 
