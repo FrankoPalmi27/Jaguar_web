@@ -48,12 +48,15 @@ const Footer: React.FC = () => {
           <div className="md:col-span-3">
             <h5 className="font-brand font-bold text-sm mb-5 text-brand-accent uppercase tracking-wider">Contacto</h5>
             <div className="space-y-4">
-              <a href="mailto:hola@jaguarlogistic.com" className="block text-white hover:text-brand-accent transition-colors text-sm">
-                hola@jaguarlogistic.com
+              <a href="mailto:sales@obsidiangrid.com.ar" className="block text-white hover:text-brand-accent transition-colors text-sm">
+                sales@obsidiangrid.com.ar
+              </a>
+              <a href="tel:+5493416113261" className="block text-white/70 hover:text-brand-accent transition-colors text-sm">
+                +54 9 3416113261
               </a>
               <div className="flex items-center gap-4 pt-4 border-t border-white/10">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/jaguar-sdl/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/40 hover:text-brand-accent transition-colors"
@@ -73,7 +76,7 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} Jaguar. Todos los derechos reservados.
           </div>
           <div className="text-white/30 text-xs">
-            Desarrollado en Argentina por profesionales de logística.
+            Powered by <a href="https://obsidiangrid.com.ar" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-white transition-colors">Obsidian Grid</a>
           </div>
           <div className="flex items-center gap-4 text-white/30 text-xs">
             <a href="#" className="hover:text-white/50 transition-colors">Términos</a>

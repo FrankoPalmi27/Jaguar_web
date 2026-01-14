@@ -70,20 +70,20 @@ const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenModal }) => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6">
             <a
-              href="mailto:hola@jaguarlogistic.com"
+              href="mailto:sales@obsidiangrid.com.ar"
               className="flex items-center gap-2 text-white/80 hover:text-brand-accent transition-colors"
             >
               <Mail className="w-4 h-4" />
-              <span className="text-sm">hola@jaguarlogistic.com</span>
+              <span className="text-sm">sales@obsidiangrid.com.ar</span>
             </a>
             <a
-              href="https://wa.me/5491112345678"
+              href="https://wa.me/5493416113261"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white/80 hover:text-brand-accent transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              <span className="text-sm">WhatsApp</span>
+              <span className="text-sm">+54 9 3416113261</span>
             </a>
           </div>
         </div>

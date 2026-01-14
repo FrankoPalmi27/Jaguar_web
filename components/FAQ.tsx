@@ -8,7 +8,7 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       question: "¿Cuánto tiempo toma implementar Jaguar?",
-      answer: "La mayoría de nuestros clientes están operativos en 1-2 semanas. El sistema es intuitivo y viene pre-configurado para operaciones de transporte en LATAM. Ofrecemos migración de datos y capacitación incluida."
+      answer: "La mayoría de nuestros clientes están operativos en 2-4 semanas. El sistema es intuitivo y viene pre-configurado para operaciones de transporte en LATAM. Ofrecemos migración de datos y capacitación incluida."
     },
     {
       question: "¿Puedo importar mis datos actuales?",

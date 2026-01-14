@@ -63,7 +63,10 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          webkit-playsinline="true"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover min-w-full min-h-full"
+          style={{ objectFit: 'cover' }}
         >
           <source src="/Logistics Stock Video Of Roadways AirWays Seaways Railways - Cargo-FikkQTfbaOs.mp4" type="video/mp4" />
         </video>
