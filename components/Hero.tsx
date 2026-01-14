@@ -11,42 +11,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [rawMouse, setRawMouse] = useState({ x: 0, y: 0 });
   const [tripCount, setTripCount] = useState(0);
-  const [videoLoaded, setVideoLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  // Force video play on mobile
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const playVideo = () => {
-      video.play().then(() => {
-        setVideoLoaded(true);
-      }).catch(() => {
-        // Video couldn't autoplay, fallback will show
-        setVideoLoaded(false);
-      });
-    };
-
-    // Try to play immediately
-    playVideo();
-
-    // Also try on user interaction (for iOS)
-    const handleInteraction = () => {
-      playVideo();
-      document.removeEventListener('touchstart', handleInteraction);
-      document.removeEventListener('click', handleInteraction);
-    };
-
-    document.addEventListener('touchstart', handleInteraction, { once: true });
-    document.addEventListener('click', handleInteraction, { once: true });
-
-    return () => {
-      document.removeEventListener('touchstart', handleInteraction);
-      document.removeEventListener('click', handleInteraction);
-    };
-  }, []);
 
   // Counter animation for "Viajes del mes"
   useEffect(() => {
@@ -93,25 +58,20 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
     >
       {/* VIDEO BACKGROUND */}
       <div className="absolute inset-0 z-0">
-        {/* Fallback background image for mobile */}
-        <div
-          className="absolute inset-0 bg-brand-primary bg-cover bg-center"
-          style={{
-            backgroundImage: !videoLoaded ? 'linear-gradient(135deg, #0F2F4A 0%, #1F5D7A 50%, #0F2F4A 100%)' : 'none'
-          }}
-        />
+        {/* Mobile: Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-primary md:hidden" />
+
+        {/* Desktop: Video background */}
         <video
-          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          webkit-playsinline="true"
-          preload="auto"
-          className={`absolute inset-0 w-full h-full object-cover ${videoLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
+          className="hidden md:block absolute inset-0 w-full h-full object-cover"
         >
           <source src="/Logistics Stock Video Of Roadways AirWays Seaways Railways - Cargo-FikkQTfbaOs.mp4" type="video/mp4" />
         </video>
+
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-brand-primary/70"></div>
       </div>
