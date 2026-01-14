@@ -40,7 +40,7 @@ const App: React.FC = () => {
         <Solution />
         <Modules id="modulos" />
         <WhyJaguar />
-        <Results />
+        {/* <Results /> */}
         <Security />
         <FAQ />
         <FinalCTA onOpenModal={setActiveModal} />
