@@ -117,6 +117,16 @@
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="antialiased overflow-x-hidden">
+    <!-- Formulario oculto para detección de Netlify Forms -->
+    <form name="contacto" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contacto" />
+      <input name="bot-field" />
+      <input name="tipo-solicitud" />
+      <input name="nombre" />
+      <input name="empresa" />
+      <input name="email" />
+    </form>
+
     <div class="fixed inset-0 cargo-grid pointer-events-none z-0"></div>
     <div id="root" class="relative z-10"></div>
 <script type="module" src="/index.tsx"></script>
