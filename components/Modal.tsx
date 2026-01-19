@@ -101,6 +101,11 @@ const Modal: React.FC<ModalProps> = ({ type, onClose }) => {
                   <input name="email" required type="email" className="bg-transparent border-b border-brand-border py-4 text-brand-petroleum text-lg font-bold focus:outline-none focus:border-brand-accent transition-all placeholder:text-neutral-300" placeholder="email@corporativo.com" />
                 </div>
 
+                <div className="flex flex-col gap-4">
+                  <label className="text-technical font-bold text-brand-slate">Request_Description</label>
+                  <textarea name="mensaje" rows={3} className="bg-transparent border border-brand-border p-4 text-brand-petroleum text-lg font-bold focus:outline-none focus:border-brand-accent transition-all placeholder:text-neutral-300 resize-none" placeholder="Contanos brevemente qué necesitás o qué te gustaría resolver..." />
+                </div>
+
                 <div className="pt-8">
                   <button type="submit" className="w-full bg-brand-petroleum text-white py-8 text-technical font-black hover:bg-brand-steel transition-all transform hover:scale-[1.01] shadow-2xl">
                     {type === 'demo' ? "Validar Acceso y Continuar" : "Descargar Documentación"}
