@@ -12,6 +12,7 @@ import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
+import WhatsAppButton from './components/WhatsAppButton';
 import { ModalType } from './types';
 
 const App: React.FC = () => {
@@ -47,6 +48,8 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
+
+      <WhatsAppButton />
 
       {activeModal && (
         <Modal type={activeModal} onClose={() => setActiveModal(null)} />
